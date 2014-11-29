@@ -406,7 +406,7 @@
  */
 /* line 23, /Users/hannah/Ghost/Ghost-Release/release/bower_components/normalize-scss/_normalize */
 html {
-  font-family: sans-serif;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -588,7 +588,7 @@ pre {
  */
 /* line 365, /Users/hannah/Ghost/Ghost-Release/release/bower_components/normalize-scss/_normalize */
 code, kbd, pre, samp {
-  font-family: monospace, monospace;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   font-size: 1em; }
 
 /* Forms
@@ -857,7 +857,7 @@ td, th {
 /* line 5, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/vendor/codemirror */
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   height: 300px; }
 
 /* line 11, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/vendor/codemirror */
@@ -1224,7 +1224,7 @@ td, th {
 
 /* line 9, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 html {
-  font: 62.5%/1.65 "Open Sans", sans-serif;
+  font: 62.5%/1.65 "Microsoft YaHei", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
@@ -1382,7 +1382,7 @@ blockquote {
 
 /* line 171, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 .markdown, pre, code, tt {
-  font-family: monospace; }
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 /* line 175, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 code, tt {
@@ -1399,7 +1399,7 @@ pre {
   background: #f1f0ea;
   width: 100%;
   padding: 10px;
-  font-family: monospace;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   font-size: 0.9em;
   white-space: pre;
   overflow: auto;
@@ -4798,7 +4798,7 @@ body.settings-menu-expanded .content-cover {
   .editor .CodeMirror pre {
     font-size: 1.6rem;
     line-height: 1.56em;
-    font-family: monospace;
+    font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
     color: #3c4043; }
   /* line 205, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/layouts/editor */
   .editor .CodeMirror .CodeMirror-focused, .editor .CodeMirror .CodeMirror-selected {
@@ -4949,7 +4949,7 @@ body.settings-menu-expanded .content-cover {
   background: #f9f9f9;
   border: none;
   padding: 100px 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
   text-align: center; }
@@ -5292,7 +5292,7 @@ body.zen {
 
 /* line 716, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/layouts/editor */
 .seo-preview {
-  font-family: Arial, sans-serif; }
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif; }
 
 /* line 720, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/layouts/editor */
 .seo-preview-title {

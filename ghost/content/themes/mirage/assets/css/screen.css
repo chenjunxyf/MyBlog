@@ -1,0 +1,1294 @@
+/*
+    1. General - Setting up some base styles
+    2. Utilities - some utils
+    3. General - The main styles for the the theme
+    4. Single Post - When you click on an individual post
+    5. Pagination - Tools to let you flick between pages
+    6. Footer - The bottom of every page
+    7. Media Queries - Larger than 900px
+    8. Media Queries - Smaller than 900px
+    9. Media Queries - Smaller than 768px
+    10. Media Queries - Smaller than 500px
+*/
+
+/* ==========================================================================
+   1. General - Setting up some base styles
+   ========================================================================== */
+html {
+  height: 100% !important;
+  max-height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2.0rem;
+  line-height: 1.6em;
+  color: #404040;
+}
+body > .content {
+    background-color: #f2f2f2;
+    padding-top: 24px;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+::-moz-selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+::selection {
+  color: #222;
+  background: #D6EDFF;
+  text-shadow: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 2.5rem;
+}
+
+h6 {
+  font-size: 2rem;
+}
+
+a {
+  color: #4a4a4a;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #57A3E8;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #404040;
+}
+
+p, ul, ol {
+  margin: 1.6em 0;
+}
+
+ol ol, ul ul,
+ul ol, ol ul {
+  margin: 0.4em 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #efefef;
+  margin: 3.2em 0;
+  padding: 0;
+}
+
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em 0em;
+  padding: 0;
+  border-left: #4f94d6 5px solid;
+}
+blockquote p {
+  padding: 1em 0 1em 2em;
+  background-color: #edf4fb;
+  font-size: 1.1em;
+}
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0.8em 1.5em;
+  font-size: 0.9em;
+  color: #ccc;
+}
+blockquote small:before {
+    content: '\2014 \00A0';
+}
+blockquote cite {
+  font-weight: bold;
+}
+blockquote cite a {
+    font-weight: normal;
+}
+
+dl {
+  margin: 1.6em 0;
+}
+dl dt {
+  float: left;
+  width: 180px;
+  overflow: hidden;
+  clear: left;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+dl dd {
+  margin-left: 200px;
+  margin-bottom: 1em;
+}
+
+mark {
+  background-color: #ffc336;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/*code, tt {
+  padding: 1px 3px;
+  font-size: 0.85em;
+  white-space: pre;
+}*/
+
+pre {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9em;
+  background: #2D2D2D;
+  white-space: pre;
+  overflow: auto;
+}
+
+pre code, tt {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  border: none;
+  padding: 0;
+  color: #E6E6E6 !important;
+  background: #2D2D2D !important;
+}
+
+kbd {
+  display: inline-block;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  border: #ccc 1px solid;
+  color: #666;
+  text-shadow: #fff 0 1px 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
+}
+
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+}
+table table table {
+  background-color: #fff;
+}
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #efefef;
+}
+table th {
+  color: #000;
+}
+table tbody + tbody {
+  border-top: 2px solid #efefef;
+}
+table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
+  background-color: #f6f6f6;
+}
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+  background: transparent;
+}
+
+/* ==========================================================================
+   2. Utilities
+   ========================================================================== */
+/* Hides the element */
+.hidden {
+  text-indent: -9999px;
+  visibility: hidden;
+  display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+  position: relative;
+  width: 80%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* Centres vertically */
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.clearfix:after {
+  display: block;
+  content: ".";
+  clear: both;
+  font-size: 0;
+  line-height: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   3. General - The main styles for the the theme
+   ========================================================================== */
+
+/* Big cover image on the home page */
+#site-head {
+  position: relative;
+  width: 100%;
+  height: 46%;
+  min-height: 408px;
+  text-align: center;
+  color: #fff;
+  background: #303538;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#site-head .dotted_bg {
+  position: absolute;
+  top: 66px;
+  width: 100%;
+  max-width: none;
+  height: 3px;
+  background: url(../images/dot.png) 0 0 repeat-x;
+}
+
+#site-head .site-head-inner {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: rgba(79, 148, 214, 0.8);
+  webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#site-head .social-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: url(../images/dot.png) 0 0 repeat-x;
+}
+#site-head .social-panel .buttons {
+  margin: 0;
+  text-align: center;
+  line-height: 70px;
+}
+#site-head .social-panel .buttons .btn {
+  line-height: 100%;
+  display: inline-block;
+  color: rgba(109, 188, 219, 0.95);
+  opacity: 0.4;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+#site-head .social-panel .buttons .btn:hover {
+  opacity: 1;
+}
+#site-head .social-panel .buttons .btn + .btn {
+  margin-left: 50px;
+}
+#site-head .social-panel .buttons .btn img {
+  vertical-align: middle;
+}
+/* Blog-logo */
+#blog-logo {
+  display: inline-block;
+  position: relative;
+  bottom: -5px;
+}
+#blog-logo.default {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background: url(../images/favicon.png) 0 0 no-repeat;
+}
+#blog-logo img {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+/* The details of your blog */
+.blog-title {
+  margin: 10px 0 10px 0;
+  font-size: 5.5rem;
+  letter-spacing: -1px;
+  font-family: "KaiTi";
+  font-weight: normal;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.blog-description {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+}
+
+/* the nav of your blog */
+/* Mobile menu button */
+a.toggle-mobile-menu {
+  display: none;
+  z-index: 10;
+  color: #4f94d6;
+  font-size: 18px;
+  text-decoration: none;
+}
+a.toggle-mobile-menu i {
+  margin-left: 10px;
+  width: 19px;
+  height: 19px;
+  line-height: 19px;
+  border: 1px solid #4f94d6;
+  border-radius: 10px;
+}
+a.toggle-mobile-menu i:before {
+    content: "\f107";
+}
+a.toggle-mobile-menu.open i:before {
+  content: "\f106";
+}
+
+/* Static pages menu */
+.menu-top {
+  line-height: 48px;
+  font-size: 16px;
+  text-align: left;
+  background: #fff;
+}
+.menu-top ul {
+  position: relative;
+  left: -20px;
+  margin: 0 auto;
+  padding: 0 0 0 140px;
+  list-style: none;
+  cursor: default;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.menu-top ul li {
+  display: inline-block;
+  padding: 0 22px;
+}
+.menu-top ul li a {
+  display: inline-block;
+  height: 100%;
+  color: #404040;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.menu-top ul li a.active, .menu-top ul li a:hover {
+  color: #4f94d6;
+}
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post .post-inner {
+  position: relative;
+  width: 80%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 0 20px 0;
+  word-break: break-word;
+  hyphens: auto;
+}
+.post .post-inner .column-left {
+  float: left;
+  padding-right: 35px;
+  width: 105px;
+}
+
+/* tag sidebar*/
+.post .post-inner .tag-sidebar {
+  width: 180px;
+}
+.post .post-inner .tag-sidebar .tag-item {
+  border-radius: 0;
+  /*background: rgba(30,30,30,.6);*/
+  background: #ccc;
+  color: #da6426;
+  border: 0;
+  margin-bottom: 1px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+.post .post-inner .tag-sidebar .post-count {
+  float: right;
+  background: rgba(30,30,30,.4);
+  /*color: #aaa;*/
+  color: red;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  background-color: #777;
+  border-radius: 10px;
+}
+
+
+.post .post-inner .column-left .post-meta {
+  margin-top: 32px;
+  text-align: right;
+  line-height: 15px;
+}
+.post .post-inner .column-left .post-meta time > * {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.post .post-inner .column-left .post-meta time > *:first-child {
+  font-size: 30px;
+  color: #467fb2;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+.post .post-inner .column-right {
+  position: relative;
+  margin-left: 140px;
+  padding: 40px 60px 20px 80px;
+  background: white url(../images/bg_post.png) 16px 0 repeat-y;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*the info of author*/
+.post .post-inner .column-right.author {
+  font-weight: 300;
+  padding: 20px 60px 15px 80px;
+}
+.post .post-inner .column-right.author .img-wrapper {
+  float: left;
+  margin-right: 15px;
+  overflow: hidden;
+}
+.post .post-inner .column-right.author .img-wrapper img {
+  height: 100px;
+  border-radius: 206px;
+  display: block;
+}
+.post .post-inner .column-right.author .info-wrapper {
+  float: left;
+  padding: 10px;
+  overflow: hidden;
+}
+.post .post-inner .column-right.author h4 {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #4f94d6;
+}
+.post .post-inner .column-right.author p {
+  margin: 0;
+}
+.post .post-inner .column-right.author .author-meta {
+  color: #ccc;
+}
+.post .post-inner .column-right.author:after {
+  display: none;
+}
+
+.post .post-inner .column-right:after {
+  position: absolute;
+  top: 53px;
+  left: -8px;
+  display: inline-block;
+  border-bottom: 8px solid rgba(0, 0, 0, 0);
+  border-right: 8px solid #FFF;
+  border-top: 8px solid rgba(0, 0, 0, 0);
+  content: '';
+}
+.post .post-inner .column-right .post-meta {
+  border-top: #e3e3e3 1px solid;
+  margin: 8px 0 3px 0;
+  padding-top: 5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+/* the featured blog */
+.featured .post-header {
+  position: relative;
+}
+.featured .post-header:after {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 30px;
+  height: 35px;
+  background: url("../images/ribbon.svg") 0 0 no-repeat;
+  background-size: cover;
+  content: " ";
+}
+
+.post-title {
+  margin: 0;
+  font-weight: normal;
+  line-height: 3.8rem;
+}
+.post-title a {
+  font-size: 3.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.post-title a:hover {
+  color: #467fb2;
+}
+
+.post-excerpt {
+  border-top: 1px solid #e3e3e3;
+  padding: 5px 0 18px 0;
+}
+.post-excerpt p {
+  margin: 1.6rem 0 0 0;
+  font-size: 0.73em;
+  line-height: 1.6em;
+}
+.post-excerpt .read-more {
+  text-align: right;
+  margin-right: 10px;
+}
+.post-excerpt .read-more a {
+  color: #467fb2;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.post-image {
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.post-image p {
+  margin: 0;
+  width: 100%;
+}
+.post-image p:empty {
+  margin-bottom: 0;
+}
+.post-image p img {
+  display: block;
+  width: 100%;
+}
+
+.post-meta {
+  display: block;
+}
+.post-meta i {
+  margin-right: 5px;
+}
+.post-meta a {
+  color: #9EABB3;
+  text-decoration: none;
+}
+.post-meta a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   4. Single Post - When you click on an individual post
+   ========================================================================== */
+.post-template {
+  /* button to scroll to the top of the page */
+}
+/*single post header*/
+.post-template #site-head {
+  height: auto;
+  min-height: 95px;
+  text-align: left;
+  background: #4f94d6;
+  border-bottom: 1px solid #65a1da;
+}
+.post-template #site-head .site-head-inner {
+  padding: 0;
+  min-height: 95px;
+}
+.post-template #site-head #site-head-content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 140px;
+}
+.post-template #site-head #blog-logo {
+  position: absolute;
+  top: calc(50% - 32px);
+  left: 132px;
+  vertical-align: middle;
+  bottom: auto;
+  z-index: 1;
+}
+.post-template #site-head .blog-title {
+  position: relative;
+  line-height: 1;
+  padding: 17px 155px 17px 85px;
+  font-size: 4rem;
+}
+.post-template #site-head .social-panel .btn + .btn {
+  margin-left: 15px;
+}
+
+.post-template .post {
+  margin-top: 0;
+  border-top: none;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  text-align: left;
+}
+.post-template .post .post-inner .column-right .post-meta {
+  margin: 14px 0 20px 0;
+  padding-top: 10px;
+}
+.post-template .post .post-inner .column-right .post-meta.bottom {
+  padding: 20px 0;
+  background-color: #fff;
+  border-bottom: none;
+  text-align: center;
+}
+.post-template .post .post-inner .column-right .post-meta .inner {
+  display: block;
+}
+.post-template .post .post-inner .column-right .post-meta .inner > * {
+  display: inline-block;
+}
+.post-template .post .post-inner .column-right .post-meta .inner > * + * {
+  margin-left: 50px;
+}
+.post-template .post .post-title {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+.post-template .post h2 {
+  margin-top: 50px;
+  font-size: 2.3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #4f94d6;
+}
+.post-template .post h3 {
+  margin-top: 50px;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #4f94d6;
+}
+.post-template .post ul, .post-template .post ol {
+  margin: 1em 0;
+}
+.post-template .post ul ul, .post-template .post ol ul {
+  list-style: none;
+}
+.post-template .post a {
+  color: #4f94d6 !important;
+}
+.post-template .post p {
+  margin: 1em 0;
+}
+.post-template .post input[type="text"] {
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  padding: 0.4em 2em;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 3px 3px #f2f2f2;
+  font-weight: 500;
+}
+.post-template .to_top {
+  padding: 20px 0 17px 0;
+  background-color: #c2c2c2;
+  text-align: center;
+}
+.post-template .to_top a {
+  font-size: 30px;
+  color: #404040 !important;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.post-template .to_top a:hover {
+  opacity: 1;
+}
+.post-template .post-content h1 {
+  font-size: 4rem;
+}
+.post-template .post-content img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.post-template .post-content h2, .post-template .post-content h3, .post-template .post-content h4, .post-template .post-content h5, .post-template .post-content h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.post-template .post-content h2 {
+  margin-top: 50px;
+  font-size: 2.8rem;
+  color: #4f94d6;
+}
+.post-template .post-content h3 {
+  margin-top: 50px;
+  font-size: 2.2rem;
+  color: #4f94d6;
+}
+.post-template .post-content h4 {
+  margin-top: 35px;
+  font-size: 1.8rem;
+  color: #4f94d6;
+}
+.post-template .post-content h5 {
+  margin-top: 30px;
+  font-size: 1.7rem;
+  color: #a2a2a2;
+}
+.post-template .post-content h6 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #a2a2a2;
+}
+
+/* The author credit area after the post */
+.post-footer {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 2rem 0 0 0;
+  border-top: #EBF2F6 1px solid;
+}
+.post-footer h4 {
+    float: left;
+    line-height: 24px;
+    height: 24px;
+    font-size: 1.6rem;
+    margin: 6px 6px 6px 0;
+}
+
+/* ==========================================================================
+   5. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+/* The main wrapper for our pagination links */
+.pagination-wrapper {
+  line-height: 2.2em;
+  padding-top: 12px;
+}
+.pagination-wrapper .pagination {
+  position: relative;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  color: #2c3e50;
+  text-align: center;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+.pagination-wrapper .pagination .fa {
+  color: #467fb2;
+}
+.pagination-wrapper .pagination a {
+  font-weight: 400;
+}
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+/*position: absolute;*/
+  display: inline-block;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+  font-weight: 300;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+  border-color: #9EABB3;
+}
+
+/* ==========================================================================
+   6. Footer - The bottom of every page
+   ========================================================================== */
+.site-footer {
+  position: relative;
+  margin: 0;
+  padding: 3.2rem 0 1.5rem 0;
+  border-top: 1px solid #b7b7b7;
+  font-size: 1.3rem;
+  line-height: 1.7em;
+  color: #BBC7CC;
+  text-align: center;
+  background: #404040;
+}
+.site-footer a {
+  color: #a2a2a2;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #fff;
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #a2a2a2;
+}
+.copyright em {
+  font-style: normal;
+}
+
+/* The subscribe link on the footer */
+.subscribe {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2.4rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+.subscribe :hover {
+  color: #fff;
+}
+
+/* ==========================================================================
+   7. Media Queries - Larger than 900px
+   ========================================================================== */
+@media only screen and (min-width: 900px) {
+  .post-template #site-head #site-head-content {
+    position: relative;
+    width: 80%;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  .post-template #site-head .social-panel {
+    background: none !important;
+    top: calc(50% - 15px);
+    left: auto;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: auto;
+  }
+  .post-template #site-head .social-panel .buttons {
+    line-height: 1;
+  }
+}
+
+/* ==========================================================================
+   8. Media Queries - Smaller than 900px
+   ========================================================================== */
+@media only screen and (max-width: 900px) {
+  blockquote {
+    margin-left: 0;
+  }
+
+  .site-head-inner {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 408px;
+    padding: 15% 0 85px 0;
+  }
+
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px;
+  }
+
+  .blog-description {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+
+  .post-template #site-head {
+    min-height: 0;
+  }
+  .post-template #site-head .site-head-inner {
+    min-height: 220px;
+    padding-bottom: 70px;
+  }
+  .post-template #site-head #site-head-content {
+    padding-top: 5px;
+    padding-left: 0;
+    text-align: center;
+  }
+  .post-template #site-head #site-head-content #blog-logo {
+    position: static;
+  }
+  .post-template #site-head #site-head-content .blog-title {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .post-template #site-head #site-head-content .social-panel .buttons {
+    line-height: 70px;
+  }
+  .post-template .post {
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  h3 {
+    font-size: 3.3rem;
+  }
+
+  h4 {
+  font-size: 2.8rem; }
+
+  .page .menu_top ul {
+    padding: 0;
+  }
+  .page .post-inner .column-right {
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .menu-top ul {
+    display: block !important;
+  }
+}
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 768px
+   ========================================================================== */
+@media only screen and (max-width: 768px) {
+  a.toggle-mobile-menu {
+    display: block;
+  }
+
+  .menu-top {
+    text-align: center;
+  }
+  .menu-top ul {
+    position: static;
+    display: none;
+    width: 100%;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  .menu-top ul li {
+    display: block;
+    padding: 3px 0 0 0;
+    background: url(../images/menu_dot.png) 0 0 repeat-x;
+  }
+  .menu-top ul li:first-child {
+    border-top: 1px solid #e3e3e3;
+    padding-top: 1px;
+    background: none;
+  }
+  .menu-top ul li a {
+    width: 100%;
+  }
+
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    text-align: center;
+  }
+  .post .post-inner {
+  width: auto;
+  }
+  .post .post-inner .column-left {
+    float: none;
+    margin: 0 auto 15px 0;
+    padding-right: 0;
+    width: auto;
+    height: 55px;
+  }
+  .post .post-inner .column-left .post-meta {
+    margin-top: 0;
+    text-align: center;
+  }
+  .post .post-inner .column-left .post-meta time > * {
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .post .post-inner .column-left .post-meta time > *:first-child {
+    width: 100%;
+    font-size: 30px;
+    color: #467fb2;
+    line-height: 30px;
+    letter-spacing: 0;
+  }
+  .post .post-inner .column-right {
+    width: auto;
+    margin-left: 0;
+    padding: 17px 5% 20px 5%;
+    background-image: none;
+  }
+  .post .post-inner .column-right.author {
+    padding: 17px 5% 20px 5%;
+  }
+  .post .post-inner .column-right .post-meta {
+    text-align: left;
+  }
+  .post .post-inner .column-right .post-header {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    background: url(../images/menu_dot.png) 0 0 repeat-x;
+    text-align: center;
+  }
+  .post .post-inner .column-right:after {
+    position: absolute;
+    top: -16px;
+    left: 49%;
+    display: inline-block;
+    border-left: 8px solid rgba(0, 0, 0, 0);
+    border-bottom: 8px solid #FFF;
+    border-right: 8px solid rgba(0, 0, 0, 0);
+    content: '';
+  }
+  .post.featured .post-header:after {
+    top: -25px;
+  }
+
+  .post-excerpt p {
+    font-size: 0.85em;
+  }
+  #site-head .site-head-inner .social-panel .buttons .btn + .btn {
+    margin-left: 20px;
+  }
+  .pagination-wrapper .pagination {
+    width: auto;
+  }
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  #blog-logo.default, #blog-logo img {
+    max-height: 80px;
+  }
+  #blog-logo.default {
+    background-size: contain;
+  }
+
+  .pagination-wrapper {
+    line-height: 1.3em;
+    padding: 20px 0;
+  }
+
+  .inner,
+  .pagination {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .post {
+    width: auto;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
+  .post .post-inner {
+    padding-bottom: 2rem;
+  }
+  .post .post-inner .column-right {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #site-head .site-head-inner .social-panel .buttons .btn + .btn {
+    margin-left: 20px;
+  }
+
+  .blog-title {
+    font-size: 3rem !important;
+  }
+
+  .blog-description {
+    font-size: 1.5rem;
+  }
+
+  h1, h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+  }
+  h1.post-title, h2.post-title {
+    text-align: center;
+  }
+  h1.post-title a, h2.post-title a {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+  h4 {
+    font-size: 2.3rem;
+  }
+
+  .post-template .post {
+    padding-bottom: 0;
+  }
+  .post-template .post-header {
+    padding: 30px 0;
+  }
+
+  .post-meta {
+    font-size: 1.3rem;
+  }
+
+  .post-footer {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .post-footer .author {
+    margin: 0 0 2rem 0;
+    padding: 0 0 1.6rem 0;
+    border-bottom: #EBF2F6 1px dashed;
+  }
+
+  .older-posts,
+  .newer-posts {
+    position: static;
+    margin: 0;
+  }
+
+  .page-number {
+    display: block;
+  }
+
+  .site-footer {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==========================================================================
+   End of file. Media queries should be the last thing here. Do not add stuff
+   below this point.
+   ========================================================================== */
