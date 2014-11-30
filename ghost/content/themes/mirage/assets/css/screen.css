@@ -3,12 +3,13 @@
     2. Utilities - some utils
     3. General - The main styles for the the theme
     4. Single Post - When you click on an individual post
-    5. Pagination - Tools to let you flick between pages
-    6. Footer - The bottom of every page
-    7. Media Queries - Larger than 900px
-    8. Media Queries - Smaller than 900px
-    9. Media Queries - Smaller than 768px
-    10. Media Queries - Smaller than 500px
+    5. Static Page
+    6. Pagination - Tools to let you flick between pages
+    7. Footer - The bottom of every page
+    8. Media Queries - Larger than 900px
+    9. Media Queries - Smaller than 900px
+    10. Media Queries - Smaller than 768px
+    11. Media Queries - Smaller than 500px
 */
 
 /* ==========================================================================
@@ -491,43 +492,6 @@ a.toggle-mobile-menu.open i:before {
   padding-right: 35px;
   width: 105px;
 }
-
-/* tag sidebar*/
-.post .post-inner .tag-sidebar {
-  width: 180px;
-}
-.post .post-inner .tag-sidebar .tag-item {
-  border-radius: 0;
-  /*background: rgba(30,30,30,.6);*/
-  background: #ccc;
-  color: #da6426;
-  border: 0;
-  margin-bottom: 1px;
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-}
-.post .post-inner .tag-sidebar .post-count {
-  float: right;
-  background: rgba(30,30,30,.4);
-  /*color: #aaa;*/
-  color: red;
-  display: inline-block;
-  min-width: 10px;
-  padding: 3px 7px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  background-color: #777;
-  border-radius: 10px;
-}
-
-
 .post .post-inner .column-left .post-meta {
   margin-top: 32px;
   text-align: right;
@@ -879,7 +843,17 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   5. Pagination - Tools to let you flick between pages
+   5. Static Page
+   ========================================================================== */
+body.page .column-left {
+  display: none;
+}
+body.page .column-right:after {
+  display: none !important;
+}
+
+/* ==========================================================================
+   6. Pagination - Tools to let you flick between pages
    ========================================================================== */
 /* The main wrapper for our pagination links */
 .pagination-wrapper {
@@ -922,7 +896,7 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   6. Footer - The bottom of every page
+   7. Footer - The bottom of every page
    ========================================================================== */
 .site-footer {
   position: relative;
@@ -968,7 +942,7 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   7. Media Queries - Larger than 900px
+   8. Media Queries - Larger than 900px
    ========================================================================== */
 @media only screen and (min-width: 900px) {
   .post-template #site-head #site-head-content {
@@ -992,7 +966,7 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   8. Media Queries - Smaller than 900px
+   9. Media Queries - Smaller than 900px
    ========================================================================== */
 @media only screen and (max-width: 900px) {
   blockquote {
@@ -1079,7 +1053,7 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   9. Media Queries - Smaller than 768px
+   10. Media Queries - Smaller than 768px
    ========================================================================== */
 @media only screen and (max-width: 768px) {
   a.toggle-mobile-menu {
@@ -1187,7 +1161,7 @@ a.toggle-mobile-menu.open i:before {
 }
 
 /* ==========================================================================
-   10. Media Queries - Smaller than 500px
+   11. Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
   #blog-logo.default, #blog-logo img {
