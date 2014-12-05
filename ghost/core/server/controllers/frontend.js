@@ -551,12 +551,12 @@ frontendControllers = {
             });
         }).catch(handleError(next));
     },
-	about: function (req, res, next) {
-		return res.render('about');
-	},
-	contact: function (req, res, next) {
-		return res.render('contact');
-	}
+    about: function (req, res, next) {
+        return res.render('about');
+    },
+    contact: function (req, res, next) {
+        return res.render('contact');
+    }
 };
 
 module.exports = frontendControllers;

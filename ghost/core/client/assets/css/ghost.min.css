@@ -1264,18 +1264,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 48, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: -2px;
   text-indent: -3px; }
 
 /* line 54, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 h2 {
-  font-size: 4.2rem;
+  font-size: 3.6rem;
   letter-spacing: -1px; }
 
 /* line 59, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 h3 {
-  font-size: 3.8rem; }
+  font-size: 3.3rem; }
 
 /* line 63, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
 h4 {
@@ -1362,7 +1362,7 @@ blockquote {
   /* line 146, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
   blockquote p {
     margin: 0.8em 0;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 300; }
   /* line 152, /Users/hannah/Ghost/Ghost-Release/release/core/client/assets/sass/patterns/global */
   blockquote small {
