@@ -656,6 +656,7 @@ a.toggle-mobile-menu.open i:before {
   text-decoration: none;
 }
 .post-meta a:hover {
+  color: #000;
   text-decoration: underline;
 }
 
