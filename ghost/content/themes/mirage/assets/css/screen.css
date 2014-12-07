@@ -615,6 +615,7 @@ a.toggle-mobile-menu.open i:before {
 }
 .post-excerpt p {
   margin: 1.6rem 0 0 0;
+  text-align: left;
   font-size: 0.73em;
   line-height: 1.6em;
 }
