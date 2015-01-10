@@ -556,6 +556,9 @@ frontendControllers = {
     },
     contact: function (req, res, next) {
         return res.render('contact');
+    },
+    tags: function (req, res, next) {
+        return res.render('tags');
     }
 };
 

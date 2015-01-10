@@ -35,12 +35,15 @@ body_class = function () {
         // To be removed from pages by #2597 when we're ready to deprecate this
         classes.push('archive-template');
     } else if(_.isString(this.relativeUrl) && this.relativeUrl.match(/\/about\//)) {
-		classes.push('post-template');
-		classes.push('page');
-	} else if(_.isString(this.relativeUrl) && this.relativeUrl.match(/\/contact\//)) {
-		classes.push('post-template');
-		classes.push('page');
-	} else if (!this.relativeUrl || this.relativeUrl === '/' || this.relativeUrl === '') {
+        classes.push('post-template');
+        classes.push('page');
+    } else if(_.isString(this.relativeUrl) && this.relativeUrl.match(/\/contact\//)) {
+        classes.push('post-template');
+        classes.push('page');
+    } else if(_.isString(this.relativeUrl) && this.relativeUrl.match(/\/tags\//)) {
+        classes.push('post-template');
+        classes.push('page');
+    } else if (!this.relativeUrl || this.relativeUrl === '/' || this.relativeUrl === '') {
         classes.push('home-template');
     } else if (post) {
         // To be removed from pages by #2597 when we're ready to deprecate this

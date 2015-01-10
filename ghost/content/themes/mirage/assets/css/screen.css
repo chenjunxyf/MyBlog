@@ -844,6 +844,28 @@ a.toggle-mobile-menu.open i:before {
     margin: 6px 6px 6px 0;
 }
 
+/* the tag cloud */
+.post-template .post-content .tag-cloud a {
+  text-decoration: none;
+  color: #da6426 !important;
+}
+.post-template .post-content .tag-cloud .tag-item {
+  display: inline-block;
+  padding: 4px 10px 4px 10px;
+  margin: 0px 5px 5px 0px;
+  border-radius: 0;
+  border: 1px solid #da6426;
+}
+.post-template .post-content .tag-cloud .tag-item:hover {
+  text-decoration: none;
+  color: #4E93D5 !important;
+  background-color: rgba(78, 146, 214, 0.2);
+  border: 1px solid #57A3E8;
+}
+.post-template .post-content .tag-cloud .post-count {
+  display: inline-block;
+  margin-left: 10px;
+}
 /* ==========================================================================
    5. Static Page
    ========================================================================== */
@@ -1267,4 +1289,4 @@ body.page .column-right:after {
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point.
-   ========================================================================== */
+   ==========================================================================
