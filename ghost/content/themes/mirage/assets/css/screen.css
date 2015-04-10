@@ -187,6 +187,14 @@ samp {
   white-space: pre;
 }*/
 
+code {
+  padding: 2px 4px;
+  font-size: 0.96em;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
 pre {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
