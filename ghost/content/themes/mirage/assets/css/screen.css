@@ -1303,11 +1303,13 @@ body.page .column-right:after {
   left: 40px;
   top: 266px;
   width: 18%;
+  max-height: 322px;
   padding: 6px 20px;
   font-size: 16px;
   background-color: #ffffff;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  overflow: auto;
 }
 .directory .title {
   padding-left: 6px;
