@@ -10,6 +10,7 @@
     9. Media Queries - Smaller than 900px
     10. Media Queries - Smaller than 768px
     11. Media Queries - Smaller than 500px
+    12. Catalog style
 */
 
 /* ==========================================================================
@@ -1294,6 +1295,59 @@ body.page .column-right:after {
   }
 }
 
+/* ==========================================================================
+   12. Catalog style
+   ========================================================================== */
+.directory {
+  position: fixed;
+  left: 40px;
+  top: 266px;
+  width: 18%;
+  padding: 6px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+.directory .title {
+  padding-left: 6px;
+  color: #467fb2;
+  font-size: 18px;
+  border-bottom: 1px solid #ebebeb;
+}
+.catalog {
+  margin: 0;
+  padding-left: 36px;
+  color: #467fb2;
+  list-style-type: square;
+}
+.catalog li {
+  word-break : break-all;
+}
+.catalog li a {
+  color: #467fb2;
+  text-decoration: none;
+}
+.catalog li a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1300px) {
+  .directory {
+    width: 18% !important;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .directory {
+    left: 26px;
+    width: 15% !important;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .directory {
+    display: none;
+  }
+}
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point.
