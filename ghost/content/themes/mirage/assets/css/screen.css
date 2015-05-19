@@ -1303,6 +1303,7 @@ body.page .column-right:after {
   left: 40px;
   top: 266px;
   width: 18%;
+  max-width: 300px;
   max-height: 322px;
   padding: 6px 20px;
   font-size: 16px;
@@ -1334,6 +1335,11 @@ body.page .column-right:after {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 1800px) {
+  .directory {
+    display: none;
+  }
+}
 @media only screen and (min-width: 1300px) {
   .directory {
     width: 18% !important;
